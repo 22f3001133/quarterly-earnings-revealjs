@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Quarterly Earnings Report – Interactive RevealJS Deck</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <!-- Reveal.js core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <!-- Theme (choose another from reveal.js if you like) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
+
+  <!-- Code syntax highlighting theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title Slide -->
+      <section>
+        <h2>Q4 Quarterly Earnings Report</h2>
+        <p>Technical Consultant, Major Financial Institution</p>
+        <p>Email: <strong>22f3001133@ds.study.iitm.ac.in</strong></p>
+        <p style="font-size: 0.8em;">Built with RevealJS &amp; published on GitHub Pages</p>
+
+        <aside class="notes">
+          Welcome everyone. This deck demonstrates not only our quarterly performance
+          but also our ability to use modern, web-based presentation tools such as RevealJS.
+        </aside>
+      </section>
+
+      <!-- Markdown Slide (data-markdown) -->
+      <section data-markdown>
+        <textarea data-template>
+# Revenue Highlights (Markdown Slide)
+
+- **Total Revenue**: ₹120 Cr  
+- **YoY Growth**: **+12%**
+- **Net Interest Income**: Stable with slight upward trend  
+- **Key Drivers**:
+  - Higher digital transaction volume  
+  - Improved risk management  
+  - Cost optimization initiatives  
+
+*This entire slide is written in Markdown and rendered by RevealJS.*
+        </textarea>
+        <aside class="notes">
+          Emphasize that this slide is authored in Markdown, which means we can keep
+          the content in .md files and still present it professionally to stakeholders.
+        </aside>
+      </section>
+
+      <!-- Slide with fragments (animated elements) -->
+      <section>
+        <h2>Key KPIs (Animated with Fragments)</h2>
+        <ul>
+          <li class="fragment fade-in">Net Profit: <strong>₹24 Cr</strong> (↑ 9% YoY)</li>
+          <li class="fragment fade-in">Cost-to-Income Ratio: <strong>48%</strong></li>
+          <li class="fragment fade-in">NPA (Non-Performing Assets): <strong>1.9%</strong></li>
+          <li class="fragment fade-in">Digital Transactions: <strong>+30% YoY</strong></li>
+        </ul>
+
+        <aside class="notes">
+          Use the fragments to reveal each KPI one by one.
+          Pause briefly on NPAs and digital transaction growth, as these are strategic highlights.
+        </aside>
+      </section>
+
+      <!-- Math / Financial Formula Slide -->
+      <section>
+        <h2>Financial Ratios &amp; Formulas</h2>
+        <p>
+          Return on Equity (ROE):
+        </p>
+        <p>
+          \\[
+            ROE = \frac{\text{Net Income}}{\text{Shareholders' Equity}}
+          \\]
+        </p>
+
+        <p>
+          Net Interest Margin (NIM):
+        </p>
+        <p>
+          \\[
+            NIM = \frac{\text{Interest Income} - \text{Interest Expense}}{\text{Average Earning Assets}}
+          \\]
+        </p>
+
+        <aside class="notes">
+          Explain how ROE reflects profitability from the shareholders' perspective
+          and why NIM is critical for a financial institution.
+        </aside>
+      </section>
+
+      <!-- Code sample with syntax highlighting -->
+      <section>
+        <h2>Code Sample: Earnings Data Pipeline</h2>
+        <pre><code class="language-python">
+import pandas as pd
+
+def compute_qoq_growth(df):
+    """
+    df columns: ['quarter', 'revenue']
+    Returns df with an extra 'qoq_growth' column.
+    """
+    df = df.sort_values('quarter')
+    df['qoq_growth'] = df['revenue'].pct_change() * 100
+    return df
+
+data = pd.DataFrame({
+    "quarter": ["Q1", "Q2", "Q3", "Q4"],
+    "revenue": [95.0, 100.0, 110.0, 120.0]
+})
+
+result = compute_qoq_growth(data)
+print(result)
+        </code></pre>
+
+        <aside class="notes">
+          This snippet illustrates how our internal analytics pipeline might compute
+          quarter-on-quarter growth using Python and pandas.
+        </aside>
+      </section>
+
+      <!-- Closing Slide -->
+      <section>
+        <h2>Questions &amp; Next Steps</h2>
+        <ul>
+          <li class="fragment">Deeper dive into segment-wise performance</li>
+          <li class="fragment">Scenario analysis &amp; stress testing</li>
+          <li class="fragment">Roadmap for next quarter initiatives</li>
+        </ul>
+        <p class="fragment">
+          Contact: <strong>22f3001133@ds.study.iitm.ac.in</strong>
+        </p>
+
+        <aside class="notes">
+          Invite questions and suggest follow-up sessions for segment-wise details
+          and scenario analysis workshops.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js core library -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+
+  <!-- Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      plugins: [ RevealNotes, RevealMarkdown, RevealHighlight, RevealMath.KaTeX ],
+      math: {
+        // Using MathJax is also possible; here we keep KaTeX default
+      }
+    });
+  </script>
+</body>
+</html>
