@@ -1,142 +1,91 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8" />
-  <title>Quarterly Earnings – RevealJS Presentation</title>
+  <meta charset="utf-8">
+  <title>RevealJS Earnings Presentation</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Reveal.js core CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
 
-  <!-- Highlight.js for code syntax -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
-
 </head>
 
 <body>
-  <div class="reveal">
-    <div class="slides">
+<div class="reveal">
+<div class="slides">
 
-      <!-- TITLE SLIDE (Email visible here) -->
-      <section>
-        <h2>Quarterly Earnings Report</h2>
-        <p>Technical Consultant – Financial Institution</p>
-        <p><strong>Email: 22f3001133@ds.study.iitm.ac.in</strong></p>
+<!-- SLIDE 1 -->
+<section>
+  <h2>Quarterly Earnings Report</h2>
+  <p>Email: 22f3001133@ds.study.iitm.ac.in</p>
+</section>
 
-        <aside class="notes">
-          Begin with introduction and mention goals of this report.
-        </aside>
-      </section>
+<!-- SLIDE 2 (Markdown) -->
+<section data-markdown>
+<textarea data-template>
+# Revenue Overview  
+Email: 22f3001133@ds.study.iitm.ac.in
 
-      <!-- MARKDOWN SLIDE -->
-      <section data-markdown>
-        <textarea data-template>
-# Revenue Overview (Markdown)
+- Revenue: ₹120 Cr  
+- YoY Growth: 12%  
+- Digital adoption rising  
+</textarea>
+</section>
 
-- **Total Revenue**: ₹120 Cr  
-- **YoY Growth**: **+12%**
-- Digital transactions increased significantly  
-- Strong customer acquisition numbers  
+<!-- SLIDE 3 (Fragments) -->
+<section>
+  <h2>KPIs</h2>
+  <p>Email: 22f3001133@ds.study.iitm.ac.in</p>
+  <ul>
+    <li class="fragment">Net Profit: ₹24 Cr</li>
+    <li class="fragment">NPA: 1.9%</li>
+    <li class="fragment">Digital +30%</li>
+  </ul>
+</section>
 
-This slide is written using **Markdown**.
-        </textarea>
+<!-- SLIDE 4 (Math) -->
+<section>
+  <h2>Financial Formula</h2>
+  <p>Email: 22f3001133@ds.study.iitm.ac.in</p>
 
-        <aside class="notes">
-          Mention growth drivers and digital transaction surge.
-        </aside>
-      </section>
+  \[
+    ROE = \frac{\text{Net Income}}{\text{Shareholder Equity}}
+  \]
+</section>
 
-      <!-- FRAGMENT SLIDE -->
-      <section>
-        <h2>Key KPIs (with animation)</h2>
-        <ul>
-          <li class="fragment fade-in">Net Profit: <strong>₹24 Cr</strong></li>
-          <li class="fragment fade-in">NPA Levels: <strong>1.9%</strong></li>
-          <li class="fragment fade-in">Cost-to-Income Ratio: <strong>48%</strong></li>
-          <li class="fragment fade-in">Digital Transactions: <strong>+30%</strong></li>
-        </ul>
+<!-- SLIDE 5 (Code) -->
+<section>
+  <h2>Python Code Example</h2>
+  <p>Email: 22f3001133@ds.study.iitm.ac.in</p>
 
-        <aside class="notes">
-          Reveal each KPI slowly to maintain engagement.
-        </aside>
-      </section>
-
-      <!-- MATH SLIDE -->
-      <section>
-        <h2>Financial Formulas</h2>
-
-        <p><strong>Return on Equity (ROE):</strong></p>
-        \[
-          ROE = \frac{\text{Net Income}}{\text{Shareholders' Equity}}
-        \]
-
-        <p><strong>Net Interest Margin (NIM):</strong></p>
-        \[
-          NIM = \frac{\text{Interest Income} - \text{Interest Expense}}{\text{Average Earning Assets}}
-        \]
-
-        <aside class="notes">
-          Explain importance of ROE and NIM for banks.
-        </aside>
-      </section>
-
-      <!-- CODE HIGHLIGHT SLIDE -->
-      <section>
-        <h2>Data Pipeline Example</h2>
-
-        <pre><code class="language-python">
+<pre><code class="language-python">
 import pandas as pd
+df = pd.DataFrame({"Q":[1,2,3,4],"rev":[95,100,110,120]})
+df["growth"] = df["rev"].pct_change() * 100
+print(df)
+</code></pre>
+</section>
 
-def compute_growth(df):
-    df = df.sort_values('quarter')
-    df['qoq_growth'] = df['revenue'].pct_change() * 100
-    return df
+<!-- SLIDE 6 -->
+<section>
+  <h2>Thank You</h2>
+  <p>Email: 22f3001133@ds.study.iitm.ac.in</p>
+</section>
 
-data = pd.DataFrame({
-    "quarter": ["Q1", "Q2", "Q3", "Q4"],
-    "revenue": [95, 100, 110, 120]
-})
+</div>
+</div>
 
-print(compute_growth(data))
-        </code></pre>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
 
-        <aside class="notes">
-          Code demonstrates a quarterly revenue growth calculation.
-        </aside>
-      </section>
-
-      <!-- CONTACT SLIDE (Email visible again) -->
-      <section>
-        <h2>Thank You</h2>
-        <p>For further details, contact:</p>
-        <p><strong>22f3001133@ds.study.iitm.ac.in</strong></p>
-
-        <aside class="notes">
-          Close presentation and invite questions.
-        </aside>
-      </section>
-
-    </div>
-  </div>
-
-  <!-- Reveal.js core JS -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
-
-  <!-- Plugins -->
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
-
-  <script>
-    Reveal.initialize({
-      hash: true,
-      slideNumber: true,
-      plugins: [ RevealNotes, RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
-    });
-  </script>
+<script>
+Reveal.initialize({
+  hash: true,
+  plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+});
+</script>
 
 </body>
 </html>
