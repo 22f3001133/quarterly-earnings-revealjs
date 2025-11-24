@@ -44,7 +44,6 @@ backgroundSize: cover
 This slide uses a **background image**, required by the autograder.
 
 Email: 22f3001133@ds.study.iitm.ac.in
-
 ---
 
 # Algorithmic Complexity
