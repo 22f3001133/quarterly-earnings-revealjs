@@ -195,6 +195,8 @@ style: |
 **Date:** November 2025  
 **Organization:** Software Engineering Team
 
+<!-- _class: title -->
+
 ---
 
 <!-- Slide 2: Overview with Custom Styling -->
