@@ -1,80 +1,403 @@
 ---
 marp: true
-theme: product-docs
+title: Product Documentation Presentation
+theme: custom-theme
 paginate: true
-_paginate: true
----
-
-<style>
-@theme product-docs {
+author: Tripurari (22f3001133@ds.study.iitm.ac.in)
+keywords: product, documentation, software, engineering
+size: 16:9
+style: |
+  @theme custom-theme
+  
+  :root {
+    --color-background: #f5f7fa;
+    --color-foreground: #2d3748;
+    --color-primary: #3182ce;
+    --color-secondary: #805ad5;
+    --font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  }
+  
   section {
-    font-family: "Segoe UI", sans-serif;
-    background-color: #0b1120;
-    color: #e5e7eb;
+    font-family: var(--font-family);
+    color: var(--color-foreground);
+    background-color: var(--color-background);
     padding: 60px;
+    font-size: 28px;
+    line-height: 1.5;
   }
-  h1, h2, h3 { color: #38bdf8; }
+  
+  h1 {
+    font-size: 60px;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 48px;
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 36px;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin: 20px 0 15px 0;
+  }
+  
+  p {
+    margin: 15px 0;
+    line-height: 1.6;
+  }
+  
+  ul, ol {
+    margin-left: 40px;
+  }
+  
+  li {
+    margin: 12px 0;
+  }
+  
+  code {
+    background-color: #edf2f7;
+    color: var(--color-secondary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+  }
+  
+  pre {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 18px;
+    margin: 15px 0;
+  }
+  
+  strong {
+    color: var(--color-secondary);
+    font-weight: 600;
+  }
+  
+  /* Page number styling */
   section::after {
-    content: attr(data-marpit-pagination) "/" attr(data-marpit-pagination-total);
+    content: 'Page ' attr(data-marpit-pagination);
     position: absolute;
-    right: 40px;
-    bottom: 24px;
-    font-size: 0.7rem;
-    color: #cccccc;
+    bottom: 20px;
+    right: 30px;
+    font-size: 20px;
+    color: var(--color-primary);
+    font-weight: 600;
   }
-}
-</style>
+  
+  /* Title slide styling */
+  section.title h1 {
+    font-size: 72px;
+    margin-bottom: 40px;
+  }
+  
+  section.title h2 {
+    font-size: 32px;
+    border: none;
+    color: var(--color-foreground);
+  }
+  
+  section.title p {
+    font-size: 24px;
+    color: var(--color-primary);
+  }
+  
+  /* Content slide styling */
+  section.content-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Emphasis box */
+  .emphasis-box {
+    background-color: #ebf4ff;
+    border-left: 4px solid var(--color-primary);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+  }
+  
+  .emphasis-box strong {
+    color: var(--color-primary);
+  }
+  
+  /* Equation styling */
+  .equation {
+    background-color: #f9fafb;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 20px 0;
+    font-size: 24px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  table th {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  table td {
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+---
 
-# Product Documentation Overview
+<!-- Slide 1: Title Slide -->
+# Product Documentation System
 
-Email: 22f3001133@ds.study.iitm.ac.in
+## Comprehensive Guide to Technical Documentation
 
-- Version-controlled documentation  
-- Exportable to PDF / HTML  
-- Built using Marp
+**Author:** Tripurari  
+**Email:** 22f3001133@ds.study.iitm.ac.in  
+**Date:** November 2025  
+**Organization:** Software Engineering Team
 
 ---
 
+<!-- Slide 2: Overview with Custom Styling -->
+## Documentation Architecture
+
+<div class="emphasis-box">
+<strong>Key Objective:</strong> Create maintainable, version-controlled documentation that converts seamlessly across multiple formats.
+</div>
+
+### Core Components
+
+- **Version Control Integration** - Git-based workflow
+- **Format Flexibility** - HTML, PDF, PPTX exports
+- **Custom Theming** - Brand-aligned styling
+- **Mathematical Support** - LaTeX equations
+- **Responsive Design** - Works on all devices
+
 ---
-backgroundImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"
-backgroundSize: cover
 
-# System Architecture
+<!-- Slide 3: Algorithmic Complexity - Mathematical Equations -->
+## Algorithmic Complexity Analysis
 
-This slide uses a **background image**, required by the autograder.
+Understanding performance characteristics of our system:
 
-Email: 22f3001133@ds.study.iitm.ac.in
----
+<div class="equation">
+$$
+T(n) = O(n \log n) + O(m)
+$$
+</div>
 
-# Algorithmic Complexity
+Where:
+- **n** = number of operations
+- **m** = memory overhead
 
-For **n** files:
+### Time Complexity Breakdown
 
 $$
-T(n) = O(n \log n)
+\begin{aligned}
+\text{Best Case} &: O(n) \\
+\text{Average Case} &: O(n \log n) \\
+\text{Worst Case} &: O(n^2)
+\end{aligned}
 $$
-
-Full rebuild:
-
-$$
-T_{\text{full}} = O(n + m)
-$$
-
-Email: 22f3001133@ds.study.iitm.ac.in
 
 ---
 
-# Workflow
+<!-- Slide 4: Features Table -->
+## Feature Comparison Matrix
 
-1. Write documentation  
-2. Commit to Git  
-3. Build with Marp  
-4. Publish output  
-
-Email: 22f3001133@ds.study.iitm.ac.in
+| Feature | Basic | Professional | Enterprise |
+|---------|-------|--------------|------------|
+| Page Numbers | ❌ | ✅ | ✅ |
+| Custom Themes | ❌ | ✅ | ✅ |
+| Math Equations | ❌ | ✅ | ✅ |
+| Background Images | ❌ | ✅ | ✅ |
+| Version Control | ✅ | ✅ | ✅ |
+| Multi-format Export | ❌ | ✅ | ✅ |
 
 ---
 
-# Thank You
+<!-- Slide 5: Background Image Slide -->
+![bg contain](https://raw.githubusercontent.com/marp-team/marp/main/docs/images/marp-community.png)
 
-Contact: **22f3001133@ds.study.iitm.ac.in**
+## Version Control Integration
+
+### Git Workflow for Presentations
+
+- Commit markdown source files
+- Track changes with meaningful commit messages
+- Collaborative editing through pull requests
+- Automatic builds on push events
+
+---
+
+<!-- Slide 6: Code Implementation -->
+## Implementation Example
+
+### Docker-based Deployment
+
+```bash
+# Install Marp CLI
+npm install --save-dev @marp-team/marp-cli
+
+# Convert to HTML
+marp slides.md --output slides.html
+
+# Convert to PDF
+marp slides.md --output slides.pdf
+
+# Watch mode for live editing
+marp -w slides.md
+```
+
+---
+
+<!-- Slide 7: Advanced Mathematics -->
+## Statistical Distribution Functions
+
+### Normal Distribution Equation
+
+<div class="equation">
+$$
+f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+$$
+</div>
+
+### Complexity Matrix Notation
+
+$$
+\begin{pmatrix}
+O(1) & O(\log n) & O(n) \\
+O(n \log n) & O(n^2) & O(2^n)
+\end{pmatrix}
+$$
+
+---
+
+<!-- Slide 8: Best Practices -->
+## Best Practices for Documentation
+
+### Maintainability Checklist
+
+- ✅ Use semantic markdown for consistency
+- ✅ Store custom themes in separate CSS files
+- ✅ Implement automated testing for exports
+- ✅ Use meaningful commit messages
+- ✅ Document all custom directives
+- ✅ Maintain version compatibility
+
+### Quality Assurance
+
+<div class="emphasis-box">
+<strong>Pro Tip:</strong> Integrate with CI/CD pipelines to automatically build and test presentations on every commit.
+</div>
+
+---
+
+<!-- Slide 9: Directory Structure -->
+## Project Organization
+
+```
+project-root/
+├── slides.md           # Main presentation file
+├── theme/
+│   └── custom-theme.css # Custom theme definition
+├── images/
+│   ├── background.png
+│   ├── logo.svg
+│   └── diagrams/
+├── .github/
+│   └── workflows/
+│       └── build.yml   # CI/CD pipeline
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
+
+<!-- Slide 10: Deployment -->
+## CI/CD Pipeline Integration
+
+### GitHub Actions Workflow
+
+```yaml
+name: Build Presentation
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - run: npm install
+      - run: npx marp slides.md -o dist/slides.html
+      - uses: actions/upload-artifact@v2
+```
+
+---
+
+<!-- Slide 11: Performance Metrics -->
+## Performance Considerations
+
+### Build Time Analysis
+
+$$
+\begin{aligned}
+\text{Parse Time} &\approx 50ms \\
+\text{Render Time} &\approx 200ms \\
+\text{Export Time} &\approx 800ms \\
+\text{Total Build} &\approx 1050ms
+\end{aligned}
+$$
+
+**Optimization Goal:** Sub-second incremental builds
+
+---
+
+<!-- Slide 12: Contact & Resources -->
+## Contact Information & Resources
+
+### Technical Lead
+
+**Email:** 22f3001133@ds.study.iitm.ac.in
+
+### Documentation Resources
+
+- **Marp Official:** https://marp.app
+- **GitHub Repository:** https://github.com/marp-team/marp
+- **VS Code Extension:** Marp for VS Code
+- **CLI Documentation:** https://github.com/marp-team/marp-cli
+
+### Further Reading
+
+All examples in this presentation follow Marp best practices and are production-ready.
+
+---
+
+## Thank You
+
+Questions? Contact: **22f3001133@ds.study.iitm.ac.in**
+
+*This presentation is version-controlled and can be exported to multiple formats.*
