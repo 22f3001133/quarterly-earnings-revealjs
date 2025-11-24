@@ -166,6 +166,23 @@ style: |
   table tr:nth-child(even) {
     background-color: #f9fafb;
   }
+  
+  /* Directive styling */
+  .directive-highlight {
+    background-color: #fef5e7;
+    border-left: 5px solid #f39c12;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+  }
+  
+  .code-highlight {
+    background-color: #fff3cd;
+    border-left: 5px solid #ff6b6b;
+    padding: 10px 15px;
+    font-family: 'Courier New', monospace;
+    margin: 10px 0;
+  }
 ---
 
 <!-- Slide 1: Title Slide -->
@@ -238,7 +255,7 @@ $$
 
 ---
 
-<!-- Slide 5: Background Image Slide -->
+<!-- Slide 5: Background Image Slide with footer directive -->
 ![bg contain](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80)
 
 ## Version Control Integration
@@ -250,12 +267,19 @@ $$
 - Collaborative editing through pull requests
 - Automatic builds on push events
 
+<!-- footer: Marp - Markdown Presentation Ecosystem -->
+
 ---
 
-<!-- Slide 6: Code Implementation -->
+<!-- Slide 6: Code Implementation with multiple directives -->
 ## Implementation Example
 
 ### Docker-based Deployment
+
+<div class="code-highlight">
+<!-- _class: directive-highlight -->
+# Use Marp directives for slide control
+</div>
 
 ```bash
 # Install Marp CLI
@@ -293,10 +317,14 @@ O(n \log n) & O(n^2) & O(2^n)
 \end{pmatrix}
 $$
 
+<!-- _footer: "Statistical analysis - Performance metrics" -->
+
 ---
 
-<!-- Slide 8: Best Practices -->
+<!-- Slide 8: Best Practices with scoped styling directive -->
 ## Best Practices for Documentation
+
+<!-- _class: content-slide -->
 
 ### Maintainability Checklist
 
@@ -315,8 +343,10 @@ $$
 
 ---
 
-<!-- Slide 9: Directory Structure -->
+<!-- Slide 9: Directory Structure with styling -->
 ## Project Organization
+
+<!-- _class: content-slide -->
 
 ```
 project-root/
@@ -337,8 +367,10 @@ project-root/
 
 ---
 
-<!-- Slide 10: Deployment -->
+<!-- Slide 10: Deployment with footer -->
 ## CI/CD Pipeline Integration
+
+<!-- _footer: "Automated builds with GitHub Actions" -->
 
 ### GitHub Actions Workflow
 
@@ -358,8 +390,80 @@ jobs:
 
 ---
 
-<!-- Slide 11: Performance Metrics -->
-## Performance Considerations
+<!-- Slide 11: Marp Directives Reference -->
+## Marp Directives Explained
+
+### Global Directives (in frontmatter)
+
+<div class="directive-highlight">
+- **marp: true** - Enables Marp processing
+- **paginate: true** - Show page numbers
+- **theme** - Specify custom theme name
+- **size: 16:9** - Set slide dimensions
+</div>
+
+### Slide-level Directives
+
+- **<!-- _class: custom-class -->** - Apply CSS class to slide
+- **<!-- _footer: "text" -->** - Add footer to slide
+- **<!-- _header: "text" -->** - Add header to slide
+- **![bg]()** - Background image directive
+
+---
+
+<!-- Slide 12: Directive Use Cases -->
+## Practical Directive Applications
+
+<!-- _class: content-slide -->
+<!-- _footer: "Advanced Marp directive patterns" -->
+
+### Image Sizing Directives
+
+- `![bg cover](image.jpg)` - Fill entire slide
+- `![bg contain](image.jpg)` - Fit within slide
+- `![bg fit](image.jpg)` - Proportional scaling
+
+### Scoped Directives
+
+- **_paginate: skip** - Hide page number on specific slide
+- **_class: title** - Apply custom class to individual slide
+- **_header/footer** - Override global header/footer
+
+---
+
+<!-- Slide 13: Advanced Styling with Directives -->
+## Combining Directives and Styling
+
+<!-- _class: content-slide -->
+
+### Color Directive Pattern
+
+```markdown
+<!-- _style: "background-color: #3182ce; color: white;" -->
+# Custom Styled Section
+```
+
+### Layout Directives
+
+```markdown
+<!-- _class: center middle -->
+# Centered Content
+```
+
+### Combining Multiple Directives
+
+```markdown
+<!-- _class: custom-layout -->
+<!-- _footer: "Slide 13: Advanced Patterns" -->
+<!-- _header: "Product Documentation" -->
+```
+
+---
+
+<!-- Slide 14: Performance with Directives -->
+## Performance Metrics
+
+<!-- _footer: "Performance Analysis - Build Optimization" -->
 
 ### Build Time Analysis
 
@@ -376,8 +480,10 @@ $$
 
 ---
 
-<!-- Slide 12: Contact & Resources -->
+<!-- Slide 15: Contact & Resources -->
 ## Contact Information & Resources
+
+<!-- _footer: "Questions? Reach out!" -->
 
 ### Technical Lead
 
@@ -389,14 +495,18 @@ $$
 - **GitHub Repository:** https://github.com/marp-team/marp
 - **VS Code Extension:** Marp for VS Code
 - **CLI Documentation:** https://github.com/marp-team/marp-cli
+- **Directives Guide:** https://marpit.marp.app/directives
 
 ### Further Reading
 
-All examples in this presentation follow Marp best practices and are production-ready.
+All examples in this presentation follow Marp best practices including comprehensive directive usage.
 
 ---
 
 ## Thank You
+
+<!-- _class: center -->
+<!-- _footer: "End of Presentation" -->
 
 Questions? Contact: **22f3001133@ds.study.iitm.ac.in**
 
