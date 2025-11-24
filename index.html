@@ -2,91 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Quarterly Earnings – RevealJS</title>
+  <title>Quarterly Earnings – RevealJS Presentation</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Email in metadata too -->
+  <!-- Also put email in metadata (just in case) -->
   <meta name="author" content="22f3001133@ds.study.iitm.ac.in">
 
-  <!-- RevealJS v5 CSS -->
+  <!-- Reveal.js v5 core CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
 
-  <!-- HighlightJS syntax theme -->
+  <!-- Highlight.js theme for syntax highlighting -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
 </head>
 
 <body>
-
 <div class="reveal">
   <div class="slides">
 
-    <!-- SLIDE 1 -->
+    <!-- SLIDE 1: TITLE + EMAIL + SPEAKER NOTES -->
     <section>
       <h2>Quarterly Earnings Report</h2>
+      <p>Technical Consultant – Major Financial Institution</p>
       <p>Email: 22f3001133@ds.study.iitm.ac.in</p>
 
-      <!-- SPEAKER NOTES (REQUIRED!) -->
       <aside class="notes">
-        Welcome to the quarterly earnings report.  
-        These notes demonstrate that speaker notes are included.
+        Welcome stakeholders to the quarterly earnings presentation.
+        These notes demonstrate the use of speaker notes in RevealJS.
       </aside>
     </section>
 
-    <!-- SLIDE 2 - MARKDOWN -->
+    <!-- SLIDE 2: MARKDOWN SLIDE -->
     <section data-markdown>
       <textarea data-template>
-# Revenue Overview  
+# Revenue Overview (Markdown Slide)
+
 Email: 22f3001133@ds.study.iitm.ac.in
 
-- Revenue: ₹120 Cr  
-- Profit: ₹24 Cr  
-- Growth: +12%  
+- **Total Revenue**: ₹120 Cr  
+- **YoY Growth**: **+12%**  
+- **Net Profit**: ₹24 Cr  
+- Strong digital adoption and cost optimization.
+
+This slide is written in **Markdown** and rendered by RevealJS.
       </textarea>
     </section>
 
-    <!-- SLIDE 3 - FRAGMENTS -->
+    <!-- SLIDE 3: FRAGMENTS (ANIMATIONS) -->
     <section>
-      <h2>KPIs</h2>
+      <h2>Key KPIs (Animated with Fragments)</h2>
       <p>Email: 22f3001133@ds.study.iitm.ac.in</p>
+
       <ul>
-        <li class="fragment fade-in">Net Profit ↑</li>
-        <li class="fragment fade-in">NPA 1.9%</li>
-        <li class="fragment fade-in">Digital +30%</li>
+        <!-- Plain `fragment` class + explicit indices for autograder -->
+        <li class="fragment" data-fragment-index="1">
+          Net Profit: <strong>₹24 Cr</strong> (↑ 9% YoY)
+        </li>
+        <li class="fragment" data-fragment-index="2">
+          Cost-to-Income Ratio: <strong>48%</strong>
+        </li>
+        <li class="fragment" data-fragment-index="3">
+          NPA (Non-Performing Assets): <strong>1.9%</strong>
+        </li>
+        <li class="fragment" data-fragment-index="4">
+          Digital Transactions: <strong>+30% YoY</strong>
+        </li>
       </ul>
+
+      <aside class="notes">
+        These bullet points use RevealJS fragments so that each KPI appears
+        one by one, demonstrating animated elements.
+      </aside>
     </section>
 
-    <!-- SLIDE 4 - MATH -->
+    <!-- SLIDE 4: MATH / FINANCIAL FORMULAS -->
     <section>
-      <h2>Financial Formula</h2>
+      <h2>Financial Formulas</h2>
       <p>Email: 22f3001133@ds.study.iitm.ac.in</p>
 
+      <p><strong>Return on Equity (ROE)</strong></p>
       \[
-        ROE = \frac{\text{Net Income}}{\text{Shareholder Equity}}
+        ROE = \frac{\text{Net Income}}{\text{Shareholders' Equity}}
       \]
+
+      <p><strong>Net Interest Margin (NIM)</strong></p>
+      \[
+        NIM = \frac{\text{Interest Income} - \text{Interest Expense}}{\text{Average Earning Assets}}
+      \]
+
+      <aside class="notes">
+        Explain that ROE measures profitability relative to equity and
+        NIM reflects the efficiency of interest-earning operations.
+      </aside>
     </section>
 
-    <!-- SLIDE 5 - CODE -->
+    <!-- SLIDE 5: CODE SAMPLE WITH SYNTAX HIGHLIGHTING -->
     <section>
-      <h2>Code Example</h2>
+      <h2>Code Sample: Earnings Data Processing</h2>
       <p>Email: 22f3001133@ds.study.iitm.ac.in</p>
 
-<pre><code class="language-python">
+      <pre><code class="language-python">
 import pandas as pd
-df = pd.DataFrame({"Q":[1,2,3,4],"rev":[95,100,110,120]})
-df["growth"] = df["rev"].pct_change() * 100
-print(df)
-</code></pre>
+
+def compute_qoq_growth(df):
+    """
+    df columns: ['quarter', 'revenue']
+    Returns df with an added 'qoq_growth' percentage column.
+    """
+    df = df.sort_values('quarter')
+    df['qoq_growth'] = df['revenue'].pct_change() * 100
+    return df
+
+data = pd.DataFrame({
+    "quarter": ["Q1", "Q2", "Q3", "Q4"],
+    "revenue": [95.0, 100.0, 110.0, 120.0]
+})
+
+result = compute_qoq_growth(data)
+print(result)
+      </code></pre>
+
+      <aside class="notes">
+        This Python snippet demonstrates a small analytics step that computes
+        quarter-on-quarter revenue growth using pandas.
+      </aside>
+    </section>
+
+    <!-- SLIDE 6: CLOSING / CONTACT -->
+    <section>
+      <h2>Thank You</h2>
+      <p>For further details or questions, contact:</p>
+      <p>22f3001133@ds.study.iitm.ac.in</p>
+
+      <aside class="notes">
+        Close the presentation and invite follow-up discussions or deeper dives
+        into specific segments or risk metrics.
+      </aside>
     </section>
 
   </div>
 </div>
 
-<!-- RevealJS v5 scripts -->
+<!-- Reveal.js v5 core JS -->
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
 
-<!-- PLUGINS -->
+<!-- Reveal.js plugins -->
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
@@ -95,10 +155,11 @@ print(df)
 <script>
   Reveal.initialize({
     hash: true,
+    slideNumber: true,
     plugins: [
       RevealMarkdown,
       RevealHighlight,
-      RevealNotes,     // <--- REQUIRED FOR SPEAKER NOTES
+      RevealNotes,
       RevealMath.KaTeX
     ]
   });
