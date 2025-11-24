@@ -3,7 +3,7 @@ marp: true
 title: Product Documentation Presentation
 theme: custom-theme
 paginate: true
-author: Tripurari (22f3001133@ds.study.iitm.ac.in)
+author: Sweta (22f3001133@ds.study.iitm.ac.in)
 keywords: product, documentation, software, engineering
 size: 16:9
 style: |
@@ -173,7 +173,7 @@ style: |
 
 ## Comprehensive Guide to Technical Documentation
 
-**Author:** Tripurari  
+**Author:** Sweta  
 **Email:** 22f3001133@ds.study.iitm.ac.in  
 **Date:** November 2025  
 **Organization:** Software Engineering Team
@@ -239,7 +239,7 @@ $$
 ---
 
 <!-- Slide 5: Background Image Slide -->
-![bg contain](https://raw.githubusercontent.com/marp-team/marp/main/docs/images/marp-community.png)
+![bg contain](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80)
 
 ## Version Control Integration
 
